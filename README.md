@@ -27,6 +27,14 @@ jsDelivr serves `index.html` directly from this public GitHub fork; no separate 
 
 These are file links, not play links: jsDelivr serves HTML as plain text. Save the file as `index.html`, then open it in your browser while online for the first load.
 
+### Play from an SVG
+
+Download [index.svg](index.svg) using GitHub's **Download raw file** button, then open the saved file in its own browser tab. You don't need a separate `index.html` for a downloaded SVG. It runs the same WebAssembly game in an HTML canvas; only the launcher and its cover are SVG. Game assets still download on first use. Use a browser with WebGL 2 and WebAssembly JSPI support, and click the game to give it keyboard focus and enable audio.
+
+To **self-host**, serve `index.svg` and `index.html` in the same directory on a static web host (`image/svg+xml` and `text/html`, respectively). Open `index.svg` directly; options such as `index.svg?quality=low` work as on the HTML page. Saves use browser storage, so don't assume progress transfers between hosts or downloaded files; use the game's export/import menu to move it.
+
+An `<img>`, a README image, or a sanitized file preview cannot run the game. The SVG is not a way to play directly on jsDelivr. After changing `index.html` or the SVG cover/template, run `python3 tools/build_svg.py` to update the downloadable copy (`--check` checks that it is in sync).
+
 ## Updating
 
 The online version is updated whenever changes are published.
