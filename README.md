@@ -18,6 +18,15 @@ The first load requires an Internet connection. To play offline, download index.
 
 My official URL is always **https://gd-webport.pages.dev/** and it will never change. If you find a similar URL that only changes one character or has a minimal difference, it is not mine. Any `.pages.dev` address is a subdomain that anyone can create with Cloudflare Pages, so those domains don't belong to me. If you want to play my version, only trust this link.
 
+### Download via jsDelivr
+
+jsDelivr serves `index.html` directly from this public GitHub fork; no separate upload is needed.
+
+* [Download `index.html` from `main`](https://cdn.jsdelivr.net/gh/bye12340/Geometry-Dash-webport@main/index.html) — follows updates after the CDN cache refreshes.
+* [Download `index.html` at commit `6d0693a`](https://cdn.jsdelivr.net/gh/bye12340/Geometry-Dash-webport@6d0693afe6d3b53bcdc1558df3bf2c1da9e6f522/index.html) — pins the HTML file, not the game assets it loads separately.
+
+These are file links, not play links: jsDelivr serves HTML as plain text. Save the file as `index.html`, then open it in your browser while online for the first load.
+
 ## Updating
 
 The online version is updated whenever changes are published.
